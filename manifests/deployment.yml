@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: neslihanhemosoftdemoson 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: neslihanhemosoftdemoson 
+    spec:
+      containers:
+        - name: neslihanhemosoftdemoson 
+          image: hemosoftdemo.azurecr.io/neslihanhemosoftdemoson
+          ports:
+          - containerPort: 80
